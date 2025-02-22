@@ -22,8 +22,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
 
     return (
         <nav className="bg-white p-2 shadow-sm shadow-green-800 w-full z-10 fixed top-0 left-0 border-b-1 border-green-800">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="mb-2 md:mb-0">
+            <div className="container mx-auto flex space-x-2 justify-between items-center">
+                <div className="mb-2">
                     <img
                         src="/logo.png"
                         alt="Gujranwala Medical College Welfare Society Logo"
@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
                     />
                 </div>
 
-                <div className="flex space-x-6">
+                <div className="flex sm-xs:space-x-6 xs:space-x-2 xs-md:space-x-4">
                     {/* {['about', 'departments', 'donate', 'cabinet'].map((section) => ( */}
                     {['about', 'departments', 'donate'].map((section) => (
                         <Link
@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
                                 e.preventDefault();
                                 scrollToSection(section);
                             }}
-                            className={`text-brown-700 hover:text-brown-900 font-semibold transition-transform duration-300 ease-in-out transform ${activeSection === section ? 'scale-110 text-brown-900' : 'hover:scale-110'
+                            className={`text-brown-700 hover:text-brown-900 xs-md:font-semibold xs:font-normal transition-transform duration-300 ease-in-out transform ${activeSection === section ? 'scale-110 text-brown-900' : 'hover:scale-110'
                                 }`}
                         >
                             {section.charAt(0).toUpperCase() + section.slice(1)}

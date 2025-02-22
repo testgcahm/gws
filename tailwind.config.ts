@@ -10,11 +10,15 @@ export default {
     extend: {
       screens: {
         'xs': '280px',
+        'xs-md': '320px',
         'sm-xs': '420px',
         'sm-s': '560px',
         'sm': '640px',
         'sm-m': '700px',
         'md': '768px',
+      },
+      maxWidth: {
+        'lg-x':'1024px',
       },
       colors: {
         brown: {

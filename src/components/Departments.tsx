@@ -38,7 +38,7 @@ const departments = [
 
 const Departments: React.FC = () => {
   return (
-    <section id="departments" className="p-6 text-center min-h-screen flex flex-col items-center justify-center bg-white">
+    <section id="departments" className="p-6 text-center min-h-screen flex flex-col items-center justify-center bg-white scroll-mt-20">
       <h2 className="text-3xl font-bold text-green-800 mb-6">Departments</h2>
       <p className="text-brown-700 max-w-2xl mx-auto mb-8 font-semibold">
         Explore our various departments working tirelessly to support the community through impactful initiatives. From improving healthcare services and education to poverty alleviation, each team plays a crucial role in creating lasting change.

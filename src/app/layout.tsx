@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   keywords: ["medical aid", "welfare", "Gujranwala", "donations"],
   icons: {
     icon: "/logo.ico", // Favicon
-    shortcut: "/favicon-16x16.png",
+    shortcut: "/logo.ico",
   },
   alternates: {
     canonical: "https://gmc-gws.vercel.app/",
