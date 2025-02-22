@@ -13,39 +13,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gujranwala Medical College Welfare Society",
+  title: {
+    default: "Gujranwala Medical College Welfare Society",
+    template: "%s | GMC Welfare Society",
+  },
   description:
     "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
-
+  keywords: ["medical aid", "welfare", "Gujranwala", "donations"],
   icons: {
-    icon: "/logo.ico", // Favicon
+    icon: "/logo.ico",
+    shortcut: "/favicon-16x16.png",
   },
-
+  alternates: {
+    canonical: "https://gmc-gws.vercel.app/",
+  },
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://gmc-gws.vercel.app/",
     title: "Gujranwala Medical College Welfare Society",
     description:
       "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
-    url: "https://gmc-gws.vercel.app/", // Replace with actual website URL
     siteName: "GMC Welfare Society",
     images: [
       {
-        url: "https://gmc-gws.vercel.app/og.png", // Open Graph image
+        url: "https://gmc-gws.vercel.app/og.png",
         width: 1200,
         height: 630,
         alt: "GMC Welfare Society Banner",
       },
     ],
-    type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Gujranwala Medical College Welfare Society",
     description:
       "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
-    images: ["https://gmc-gws.vercel.app/og.png"], // Twitter uses Open Graph image
+    images: ["https://gmc-gws.vercel.app/og.png"],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -58,13 +63,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Meta tags for better SEO */}
+        {/* Meta tags for responsive design and SEO */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
