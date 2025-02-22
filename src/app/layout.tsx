@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Use metadataBase (metadatabase) to set the base URL for relative URLs
+  metadataBase: new URL("https://gmc-gws.vercel.app/"),
   title: {
     default: "Gujranwala Medical College Welfare Society",
     template: "%s | GMC Welfare Society",
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
   keywords: ["medical aid", "welfare", "Gujranwala", "donations"],
   icons: {
-    icon: "/logo.ico",
+    icon: "/logo.ico", // Favicon
     shortcut: "/favicon-16x16.png",
   },
   alternates: {
@@ -37,7 +39,8 @@ export const metadata: Metadata = {
     siteName: "GMC Welfare Society",
     images: [
       {
-        url: "https://gmc-gws.vercel.app/og.png",
+        // Using a relative URL here so it is combined with metadataBase
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "GMC Welfare Society Banner",
@@ -49,7 +52,8 @@ export const metadata: Metadata = {
     title: "Gujranwala Medical College Welfare Society",
     description:
       "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
-    images: ["https://gmc-gws.vercel.app/og.png"],
+    // Relative URLs will be resolved with metadataBase
+    images: ["/og.png"],
   },
   robots: {
     index: true,
@@ -63,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Meta tags for responsive design and SEO */}
+        {/* Essential meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
       </head>
