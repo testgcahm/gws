@@ -16,15 +16,20 @@ export const metadata: Metadata = {
   title: "Gujranwala Medical College Welfare Society",
   description:
     "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
+
+  icons: {
+    icon: "/logo.ico", // Favicon
+  },
+
   openGraph: {
     title: "Gujranwala Medical College Welfare Society",
     description:
       "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
-    url: "https://gmc-gws.vercel.app/",
+    url: "https://gmc-gws.vercel.app/", // Replace with actual website URL
     siteName: "GMC Welfare Society",
     images: [
       {
-        url: "/og.png",
+        url: "/og.png", // Open Graph image
         width: 1200,
         height: 630,
         alt: "GMC Welfare Society Banner",
@@ -32,22 +37,31 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Gujranwala Medical College Welfare Society",
     description:
       "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
-    images: ["/og.png"],
+    images: ["/og.png"], // Twitter uses Open Graph image
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Meta tags for better SEO */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
