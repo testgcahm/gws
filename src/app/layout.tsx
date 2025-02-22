@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "GMC Welfare Society",
     images: [
       {
-        url: "/og.png", // Open Graph image
+        url: "https://gmc-gws.vercel.app/og.png", // Open Graph image
         width: 1200,
         height: 630,
         alt: "GMC Welfare Society Banner",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Gujranwala Medical College Welfare Society",
     description:
       "Join us in our mission to fight poverty and provide free medical aid. Your donations can make a difference!",
-    images: ["/og.png"], // Twitter uses Open Graph image
+    images: ["https://gmc-gws.vercel.app/og.png"], // Twitter uses Open Graph image
   },
 
   robots: {
