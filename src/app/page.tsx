@@ -14,7 +14,7 @@ export default function Home() {
   // Handle scroll to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'departments', 'donate', 'cabinet'];
+      const sections = ['about', 'departments', 'donate'];
       // const sections = ['about', 'departments', 'donate', 'cabinet'];
       for (let section of sections) {
         const element = document.getElementById(section);
@@ -31,7 +31,7 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-return (<></>) 
+
   return (
     <div className="min-h-screen bg-white flex flex-col overflow-hidden">
       {/* Header */} 
