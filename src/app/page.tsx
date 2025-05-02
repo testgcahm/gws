@@ -31,10 +31,10 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+return (<></>) 
   return (
     <div className="min-h-screen bg-white flex flex-col overflow-hidden">
-      {/* Header */}
+      {/* Header */} 
 
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
 
