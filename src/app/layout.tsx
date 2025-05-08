@@ -71,7 +71,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       ><Analytics />
-        <VercelScreenOfDeath message="An error occurred while loading the page. Please try again later." />
+        {/*<VercelScreenOfDeath message="An error occurred while loading the page. Please try again later." />*/} 
       </body>
     </html>
   )
