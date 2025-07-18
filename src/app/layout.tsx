@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/next';
-import VercelScreenOfDeath from "@/components/VercelScreenOfDeath";
+import InstallButton from "@/components/InstallButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,23 +66,27 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><Analytics />
-        {/*<VercelScreenOfDeath message="An error occurred while loading the page. Please try again later." />*/} 
-      </body>
-    </html>
-  )
+  // return (
+  //   <html lang="en">
+  //     <head>
+  //       <link rel="manifest" href="/manifest.webmanifest" />
+  //     </head>
+  //     <body
+  //       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+  //     ><Analytics />
+  //       <VercelScreenOfDeath message="An error occurred while loading the page. Please try again later." />
+  //     </body>
+  //   </html>
+  // )
   return (
     <html lang="en">
       <head>
-        {/* Essential meta tags */}
+        <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <InstallButton />
         {children}
         <Analytics />
       </body>

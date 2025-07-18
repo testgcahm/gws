@@ -13,7 +13,7 @@ const Donate: React.FC = () => {
   };
 
   return (
-    <section id="donate" className="p-6 text-center pt-20 min-h-screen bg-white">
+    <section id="donate" className="p-6 text-center pt-20 min-h-[80vh] bg-white">
       <h2 className="text-3xl font-bold text-green-800 mb-6">Donate</h2>
       <p className="text-brown-700 max-w-2xl mx-auto font-semibold mb-6">
         Your Zakat and donations can make a difference. Contribute and help us fight poverty.
