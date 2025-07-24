@@ -18,7 +18,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-simple-typewriter": "^5.0.1",
-    "serwist": "^9.1.0"
+    "serwist": "^9.1.0",
+    "serwistcache": "^1.0.6"
   },
   "devDependencies": {
     "@types/node": "^20",
